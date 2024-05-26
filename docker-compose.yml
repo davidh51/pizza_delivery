@@ -7,9 +7,8 @@ services:
 
       volumes: 
       - ./:/usr/src/app
-
-      #command: python3 ./app/run.py
-      command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+      
+      command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
       env_file:
       - ./.env
