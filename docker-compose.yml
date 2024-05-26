@@ -5,11 +5,11 @@ services:
       ports:
       - 8000:8000
 
-      #volumes:  # guardar cambios
-      #- ./:/usr/src/app
+      volumes:  # guardar cambios
+      - ./:/usr/src/app
 
-      command: python3 app/run.py
-      #command: gunicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      #command: python3 app/run.py
+      command: gunicorn app.main:app --host 0.0.0.0 --port 8000 --reload
         
       env_file:
       - ./.env
