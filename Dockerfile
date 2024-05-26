@@ -10,6 +10,9 @@ COPY . .
 
 EXPOSE 8000
 
-ENV PYTHONPATH=/usr/src/app
+#ENV PYTHONPATH=/usr/src/app
 
-CMD ["python", "app/run.py"]
+#CMD ["python", "app/run.py"]
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
