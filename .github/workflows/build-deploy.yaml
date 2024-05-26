@@ -59,7 +59,7 @@ jobs:
                context: .
                file: ./Dockerfile
                push: true
-               tags: ${{ secrets.DOCKERHUB_USERNAME }}/blog2:latest
+               tags: ${{ secrets.DOCKERHUB_USERNAME }}/pizza_delivery:latest
 
     Back4app-deployment:
        runs-on: ubuntu-latest
