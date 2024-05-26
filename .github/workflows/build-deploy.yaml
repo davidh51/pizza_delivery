@@ -23,10 +23,10 @@ jobs:
            run: pip install -r requirements.txt
    
     Render-deployment:
-       uns-on: ubuntu-latest
+       runs-on: ubuntu-latest
        needs: [build]
 
-       environment: Render_production
+       environment: Render
 
        steps:
          - name: Get actions
@@ -65,7 +65,7 @@ jobs:
        runs-on: ubuntu-latest
        needs: [Docker-deploy]
 
-       environment: Back4app_production
+       environment: Back4app
 
        steps:
           - name: Get actions
