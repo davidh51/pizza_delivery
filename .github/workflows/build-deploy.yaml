@@ -63,7 +63,7 @@ jobs:
     
     Render-deployment:
        runs-on: ubuntu-latest
-       needs: [Docker-deploy]
+       needs: [build]
 
        environment: Render
 
